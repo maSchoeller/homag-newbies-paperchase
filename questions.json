@@ -14,20 +14,24 @@
     "message": "string2 => correct",
     "type": "multipleChoice",
     "imagePath": "",
-    "answer" : [
+    "answers" : [
       {
-        "key": "string1",
+        "text": "string1",
         "right": false
       },
       {
-        "key": "string2",
+        "text": "string2",
         "right": true
       },
       {
-        "key": "string3",
+        "text": "string3",
         "right": false
       }
-    ]
+    ],
+    "nextLocation": {
+      "longitude": "48.438040",
+      "latitude" : "8.546867"
+    }
   },
   {
     "id":"test-name-question",
