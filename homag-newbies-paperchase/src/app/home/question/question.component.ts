@@ -1,4 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { QuestionLoaderService} from '../../services/question-loader.service'
+import { IQuestion, Questiontype } from 'src/app/models/IQuestion';
+
+import INumberQuestion from 'src/app/models/INumberQuestion';
+import INameQuestion from 'src/app/models/INameQuestion';
+import IMultipleChoiceQuestion from 'src/app/models/IMultipleChoiceQuestion';
 
 @Component({
   templateUrl: './question.component.html',
@@ -6,9 +13,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuestionComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private questionLoader: QuestionLoaderService) { }
+
+  question: IQuestion;
 
   ngOnInit(): void {
+    let routeParams = this.route.snapshot.params;
+    console.log(routeParams.id);
+    this.question = this.questionLoader.findQuestion(routeParams.id);
   }
 
+  isNumberQuestion(q: IQuestion): q is INumberQuestion{
+    return q.type=== Questiontype.Number;
+  }
+
+  isNameQuestion(q: IQuestion): q is INameQuestion{
+    return q.type === Questiontype.Name;
+  }
+
+  isMultipleChoiceQuestion(q: IQuestion): q is IMultipleChoiceQuestion{
+    return q.type === Questiontype.MultipleChoice;
+
+  }
 }

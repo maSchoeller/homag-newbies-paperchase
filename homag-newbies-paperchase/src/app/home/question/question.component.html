@@ -1,1 +1,17 @@
 <p>question works!</p>
+<h2>{{question.header}}</h2>
+
+<p>{{question.message}}</p>
+
+
+<div *ngIf="isNumberQuestion(question)">
+  <div>number question</div>
+</div>
+
+<div *ngIf="isNameQuestion(question)">
+  <div>Name question</div>
+</div>
+
+<div *ngIf="isMultipleChoiceQuestion(question)">
+  <div>MultipleChoice question</div>
+</div>

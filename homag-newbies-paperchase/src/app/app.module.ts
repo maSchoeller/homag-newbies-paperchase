@@ -6,7 +6,13 @@ import { AppComponent } from './app.component';
 import { ScannerComponent } from './home/scanner/scanner.component';
 import { QuestionComponent } from './home/question/question.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -18,7 +24,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
