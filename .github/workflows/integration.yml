@@ -31,7 +31,7 @@ jobs:
       - name: npm install and npm run build
         run: |
           npm i
-          npm run build -- --prod
+          npm run build --base-href=/homag-newbies-paperchase/ -- --prod 
         working-directory: homag-newbies-paperchase
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.5.9
