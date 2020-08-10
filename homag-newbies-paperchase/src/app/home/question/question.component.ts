@@ -5,7 +5,7 @@ import { IQuestion, Questiontype } from 'src/app/models/IQuestion';
 
 import INumberQuestion from 'src/app/models/INumberQuestion';
 import INameQuestion from 'src/app/models/INameQuestion';
-import IMultipleChoiceQuestion from 'src/app/models/IMultipleChoiceQuestion';
+import {IMultipleChoiceQuestion, IAnswer} from 'src/app/models/IMultipleChoiceQuestion';
 
 @Component({
   templateUrl: './question.component.html',
@@ -13,9 +13,11 @@ import IMultipleChoiceQuestion from 'src/app/models/IMultipleChoiceQuestion';
 })
 export class QuestionComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, private questionLoader: QuestionLoaderService) { }
+  constructor(private route: ActivatedRoute, private questionLoader: QuestionLoaderService
+             ) { }
 
   question: IQuestion;
+  multipleChoiceSelection: IAnswer;
 
   ngOnInit(): void {
     let routeParams = this.route.snapshot.params;
@@ -34,5 +36,24 @@ export class QuestionComponent implements OnInit {
   isMultipleChoiceQuestion(q: IQuestion): q is IMultipleChoiceQuestion{
     return q.type === Questiontype.MultipleChoice;
 
+  }
+
+  checkAnswer() {
+    if (this.isMultipleChoiceQuestion(this.question)) {
+      console.log(this.multipleChoiceSelection);
+      if (this.multipleChoiceSelection.right) {
+
+      }
+      else {
+
+      }
+    }
+    else if (this.isNameQuestion(this.question)) {
+
+    } else if(this.isNumberQuestion(this.question)) {
+
+    } else {
+      console.log("Unsupported Question type.");
+    }
   }
 }

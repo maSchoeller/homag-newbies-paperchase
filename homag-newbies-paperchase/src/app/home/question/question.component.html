@@ -1,17 +1,34 @@
-<p>question works!</p>
-<h2>{{question.header}}</h2>
+<mat-card class="question-card">
+  <mat-card-header>
+    <mat-card-title>{{question.header}}</mat-card-title>
+  </mat-card-header>
+  <img *ngIf="question.imagePath" mat-card-image [src]="question.imagePath" alt="Bild zur frage">
+  <mat-card-content class="question-content">
+    <p class="question-message">
+      {{question.message}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <div *ngIf="isNumberQuestion(question)">
 
-<p>{{question.message}}</p>
+    </div>
 
+    <div *ngIf="isNameQuestion(question)">
+      <div>Name question</div>
+    </div>
 
-<div *ngIf="isNumberQuestion(question)">
-  <div>number question</div>
-</div>
+    <div *ngIf="isMultipleChoiceQuestion(question)">
+      <mat-radio-group
+        aria-labelledby="multipleChoice-radio-group"
+        class="multipleChoice-radio-group"
+        [(ngModel)]="multipleChoiceSelection">
+        <mat-radio-button class="multipleChoice-radio-button" *ngFor="let answer of question.answers" [value]="answer">
+          {{answer.text}}
+        </mat-radio-button>
+      </mat-radio-group>
+      <p>{{multipleChoiceSelection}}</p>
+    </div>
+    <button mat-raised-button color="primary" (click)="checkAnswer()" >Bestätigen</button>
+  </mat-card-actions>
+</mat-card>
 
-<div *ngIf="isNameQuestion(question)">
-  <div>Name question</div>
-</div>
-
-<div *ngIf="isMultipleChoiceQuestion(question)">
-  <div>MultipleChoice question</div>
-</div>

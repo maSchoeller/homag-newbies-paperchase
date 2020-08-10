@@ -1,8 +1,10 @@
 import { IQuestion } from "./IQuestion";
 
-export default interface IMultipleChoiceQuestion extends IQuestion {
-  answer : {
-    key: string,
-    right: boolean
-  }[]
+export interface IMultipleChoiceQuestion extends IQuestion {
+  answers : IAnswer[]
+}
+
+export interface IAnswer {
+  text: string,
+  right: boolean
 }

@@ -4,6 +4,10 @@ export interface IQuestion {
   message: string,
   type: Questiontype,
   imagePath: string,
+  nextLocation: {
+    longitude : string,
+    latitude: string
+  }
 }
 
 export enum Questiontype {
