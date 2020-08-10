@@ -1,0 +1,41 @@
+[
+  {
+    "id":"number-question",
+    "header": "a number question",
+    "message": "a number question message",
+    "type": "number",
+    "imagePath": "",
+    "answer": 10,
+    "range": 0.5
+  },
+  {
+    "id":"string-question",
+    "header": "string question",
+    "message": "string2 => correct",
+    "type": "multipleChoice",
+    "imagePath": "",
+    "answer" : [
+      {
+        "key": "string1",
+        "right": false
+      },
+      {
+        "key": "string2",
+        "right": true
+      },
+      {
+        "key": "string3",
+        "right": false
+      }
+    ]
+  },
+  {
+    "id":"test-name-question",
+    "header": "my name question",
+    "message": "sdfsdofgh dfijb dfu d",
+    "type": "name",
+    "imagePath": "",
+    "answer": "ANSWER",
+    "caseSensitive": false
+  }
+]
