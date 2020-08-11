@@ -2,7 +2,7 @@
   {
     "id":"mitarbeiter-homag",
     "header": "a number question",
-    "message": "Wie viele Mitarbeiter hat HOMAG momentan angestellt?",
+    "message": "Wie viele Mitarbeiter hat HOMAG momentan ca. angestellt?",
     "type": "number",
     "imagePath": "",
     "answer": 6498,
