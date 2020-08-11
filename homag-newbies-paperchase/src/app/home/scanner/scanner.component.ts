@@ -10,7 +10,8 @@ export class ScannerComponent implements OnInit {
   constructor(private router: Router) { }
 
   scannerEnabled: boolean = true;
-
+  errorMessage: string
+  errorMessageHasDevice: string
 
   ngOnInit(): void {
   }
@@ -23,5 +24,16 @@ export class ScannerComponent implements OnInit {
   enableScanner() {
     this.scannerEnabled = true;
   }
+
+  displayMessage(message: string) {
+    this.errorMessage = message;
+    console.log(message)
+  }
+  displayMessageHasDevice(message: string) {
+    this.errorMessageHasDevice = message;
+    console.log(message)
+  }
+
+
 
 }
