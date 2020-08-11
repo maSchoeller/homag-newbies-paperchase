@@ -19,6 +19,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 
 import { ZXingScannerModule } from '@zxing/ngx-scanner';
 import { DialogComponent } from './home/dialog/dialog.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -44,7 +46,8 @@ import { DialogComponent } from './home/dialog/dialog.component';
     MatRadioModule,
     FormsModule,
     ZXingScannerModule,
-    MatDialogModule
+    MatDialogModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
