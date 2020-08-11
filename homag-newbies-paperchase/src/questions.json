@@ -1,7 +1,6 @@
 [
   {
     "id":"mitarbeiter-homag",
-    "header": "a number question",
     "message": "Wie viele Mitarbeiter hat HOMAG momentan ca. angestellt?",
     "type": "number",
     "imagePath": "",
@@ -10,8 +9,7 @@
   },
   {
     "id":"ausbildungsberufe",
-    "header": "string question",
-    "message": "Welchen Beruf bildet HOMAG nicht aus",
+    "message": "Welchen Beruf bildet HOMAG nicht aus?",
     "type": "multipleChoice",
     "imagePath": "",
     "answers" : [
@@ -35,8 +33,7 @@
   },
   {
     "id":"homag-ceo",
-    "header": "my name question",
-    "message": "Wie heißt der CEO der HOMAG.",
+    "message": "Wie heißt der CEO der HOMAG?",
     "type": "name",
     "imagePath": "",
     "answer": "Pekka Paasivaara",
