@@ -9,7 +9,7 @@ export class ScannerComponent implements OnInit {
 
   constructor(private router: Router) { }
 
-  scannerEnabled: boolean = true;
+  scannerEnabled: boolean = false;
   errorMessage: string
   errorMessageHasDevice: string
 

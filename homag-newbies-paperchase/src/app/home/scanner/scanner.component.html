@@ -12,5 +12,6 @@
     <button (click)="enableScanner()" *ngIf="!scannerEnabled" mat-raised-button color="primary" >Scanner Öffnen</button>
     {{errorMessage}}
     {{errorMessageHasDevice}}
+    <button mat-raised-button color="primary" (click)="enableScanner()">anfragen</button>
   </mat-card>
 </div>
