@@ -10,9 +10,8 @@ export class ScannerComponent implements OnInit {
 
   constructor(private router: Router) { }
 
-  scannerEnabled: boolean = false;
+  scannerEnabled: boolean = true;
   errorMessage: string
-  errorMessageHasDevice: string
 
   @ViewChild('scanner', { static: false })
   scanner: ZXingScannerComponent;
@@ -25,25 +24,15 @@ export class ScannerComponent implements OnInit {
     this.router.navigate(['/question', $event])
   }
 
-  async enableScanner() {
-    let result = await this.scanner.askForPermission();
-    this.scannerEnabled = true;
-    this.errorMessageHasDevice = result+'ask for permission';
+
+  noPermission(permission:  boolean) {
+    if (!permission) {
+      this.errorMessage = 'Die Kamera konnte nicht geöffnet werden, evtl. hast du den Kamerazugriff (global) deaktiviert.';
+    }
   }
 
-  displayMessage(message: string) {
-    this.errorMessage = message;
-    console.log(message)
+  noCamerasFound($event: any) {
+    this.errorMessage = 'Es wurde keine Kamera gefunden.' + $event;
   }
-  displayMessageHasDevice(message: string) {
-    this.errorMessageHasDevice = message;
-    console.log(message)
-  }
-
-  camerasFoundHandler($event: MediaDeviceInfo[]){
-    console.log($event);
-    this.scanner.device = $event[0];
-  }
-
 
 }

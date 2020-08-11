@@ -6,8 +6,8 @@ import { IQuestion, Questiontype } from 'src/app/models/IQuestion';
 import INumberQuestion from 'src/app/models/INumberQuestion';
 import INameQuestion from 'src/app/models/INameQuestion';
 import {IMultipleChoiceQuestion, IAnswer} from 'src/app/models/IMultipleChoiceQuestion';
-import { NumberSymbol } from '@angular/common';
-import { trimTrailingNulls } from '@angular/compiler/src/render3/view/util';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogComponent } from '../dialog/dialog.component';
 
 @Component({
   templateUrl: './question.component.html',
@@ -15,8 +15,9 @@ import { trimTrailingNulls } from '@angular/compiler/src/render3/view/util';
 })
 export class QuestionComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, private questionLoader: QuestionLoaderService
-             ) {
+  constructor(private route: ActivatedRoute,
+              private questionLoader: QuestionLoaderService,
+              private dialog: MatDialog) {
                this.nameSelection = '';
               }
 
@@ -68,10 +69,10 @@ export class QuestionComponent implements OnInit {
       return;
     }
     if (right) {
-
+      const dialogRef = this.dialog.open(DialogComponent, { data : { successful: true }});
     }
     else {
-      alert("Die Anwort ist leider falsch.");
+      const dialogRef = this.dialog.open(DialogComponent, { data : { successful: false }});
     }
   }
 }

@@ -15,8 +15,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import { MapsComponent } from './home/maps/maps.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { ZXingScannerModule } from '@zxing/ngx-scanner';
+import { DialogComponent } from './home/dialog/dialog.component';
 
 
 @NgModule({
@@ -25,7 +27,11 @@ import { ZXingScannerModule } from '@zxing/ngx-scanner';
     ScannerComponent,
     QuestionComponent,
     PageNotFoundComponent,
-    MapsComponent
+    MapsComponent,
+    DialogComponent
+  ],
+  entryComponents: [
+    DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +43,8 @@ import { ZXingScannerModule } from '@zxing/ngx-scanner';
     MatInputModule,
     MatRadioModule,
     FormsModule,
-    ZXingScannerModule
+    ZXingScannerModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

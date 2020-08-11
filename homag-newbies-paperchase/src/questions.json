@@ -1,30 +1,30 @@
 [
   {
-    "id":"number-question",
+    "id":"mitarbeiter-homag",
     "header": "a number question",
-    "message": "a number question message",
+    "message": "Wie viele Mitarbeiter hat HOMAG momentan angestellt?",
     "type": "number",
     "imagePath": "",
-    "answer": 10,
+    "answer": 6498,
     "range": 0.05
   },
   {
-    "id":"string-question",
+    "id":"ausbildungsberufe",
     "header": "string question",
-    "message": "string2 => correct",
+    "message": "Welchen Beruf bildet HOMAG nicht aus",
     "type": "multipleChoice",
     "imagePath": "",
     "answers" : [
       {
-        "text": "string1",
+        "text": "Elektroniker",
         "right": false
       },
       {
-        "text": "string2",
+        "text": "Studium BWL Industrie",
         "right": true
       },
       {
-        "text": "string3",
+        "text": "Fachinformatiker",
         "right": false
       }
     ],
@@ -34,12 +34,12 @@
     }
   },
   {
-    "id":"test-name-question",
+    "id":"homag-ceo",
     "header": "my name question",
-    "message": "sdfsdofgh dfijb dfu d",
+    "message": "Wie heißt der CEO der HOMAG.",
     "type": "name",
     "imagePath": "",
-    "answer": "ANSWER",
+    "answer": "Pekka Paasivaara",
     "caseSensitive": false
   }
 ]

@@ -1,6 +1,6 @@
 export interface IQuestion {
   id: string,
-  header: string,
+  // header: string,
   message: string,
   type: Questiontype,
   imagePath: string,

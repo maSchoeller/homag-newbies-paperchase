@@ -1,18 +1,12 @@
 <div class="scanner-container">
   <mat-card>
     <mat-card-header>
-      <mat-card-title>Scanne den nächsten QR Code:</mat-card-title>
+      <mat-card-title>Scanne den nächsten QR Code um die Frage zu lesen:</mat-card-title>
     </mat-card-header>
     <zxing-scanner #scanner (scanSuccess)="scanSuccessHandler($event)"
-    (permissionResponse)="displayMessage($event)"
-    (camerasFound)="camerasFoundHandler($event)"
-    (camerasNotFound)="displayMessage('Keine kameras gefunden')"
-    (hasDevices)="displayMessageHasDevice($event)"
-    (torchCompatible)="displayMessage('torchCompatible')">
+    (permissionResponse)="noPermission($event)"
+    (camerasNotFound)="noCamerasFound($event)">
     </zxing-scanner>
-    <button (click)="enableScanner()" *ngIf="!scannerEnabled" mat-raised-button color="primary" >Scanner Öffnen</button>
     {{errorMessage}}
-    {{errorMessageHasDevice}}
-    <button mat-raised-button color="primary" (click)="enableScanner()">anfragen</button>
   </mat-card>
 </div>

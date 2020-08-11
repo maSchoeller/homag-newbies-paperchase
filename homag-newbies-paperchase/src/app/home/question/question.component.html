@@ -1,36 +1,36 @@
 <div *ngIf="questionFound">
   <mat-card class="question-card">
-    <mat-card-header>
-      <mat-card-title>{{question.header}}</mat-card-title>
-    </mat-card-header>
-    <img *ngIf="question.imagePath" mat-card-image [src]="question.imagePath" alt="Bild zur frage">
+    <!-- <mat-card-header class="action">
+      <mat-card-title class="input">{{question.header}}</mat-card-title>
+    </mat-card-header> -->
+    <img *ngIf="question.imagePath" mat-card-image [src]="question.imagePath" alt="Bild zur Frage">
     <mat-card-content class="question-content">
       <p class="question-message">
         {{question.message}}
       </p>
     </mat-card-content>
-    <mat-card-actions>
-      <div *ngIf="isNumberQuestion(question)">
+    <mat-card-actions class="action">
+      <div *ngIf="isNumberQuestion(question)" class="input">
         <mat-form-field appearance="standard">
           <input matInput placeholder="Antwort" type="number" [(ngModel)]="numberSelection">
         </mat-form-field>
       </div>
 
-      <div *ngIf="isNameQuestion(question)">
+      <div *ngIf="isNameQuestion(question)" class="input">
         <mat-form-field appearance="standard">
           <input matInput placeholder="Antwort" [(ngModel)]="nameSelection">
         </mat-form-field>
       </div>
 
-      <div *ngIf="isMultipleChoiceQuestion(question)">
+      <div *ngIf="isMultipleChoiceQuestion(question)" class="input">
         <mat-radio-group aria-labelledby="multipleChoice-radio-group" class="multipleChoice-radio-group"
         [(ngModel)]="multipleChoiceSelection">
-        <mat-radio-button class="multipleChoice-radio-button" *ngFor="let answer of question.answers" [value]="answer">
-          {{answer.text}}
-        </mat-radio-button>
+          <mat-radio-button class="multipleChoice-radio-button" *ngFor="let answer of question.answers" [value]="answer">
+            {{answer.text}}
+          </mat-radio-button>
       </mat-radio-group>
     </div>
-    <button mat-raised-button color="primary" (click)="checkAnswer()">Bestätigen</button>
+    <button mat-raised-button color="primary" (click)="checkAnswer()" class="input">Bestätigen</button>
   </mat-card-actions>
 </mat-card>
 </div>
