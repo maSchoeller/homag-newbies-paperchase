@@ -1,1 +1,10 @@
-<p>scanner works!</p>
+<div class="scanner-container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Scanne den nächsten QR Code:</mat-card-title>
+    </mat-card-header>
+    <zxing-scanner *ngIf="scannerEnabled" #scanner (scanSuccess)="scanSuccessHandler($event)">
+    </zxing-scanner>
+    <button (click)="enableScanner()" *ngIf="!scannerEnabled" mat-raised-button color="primary" >Scanner Öffnen</button>
+  </mat-card>
+</div>

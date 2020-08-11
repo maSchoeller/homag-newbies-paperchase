@@ -14,6 +14,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
+import { MapsComponent } from './home/maps/maps.component';
+
+import { ZXingScannerModule } from '@zxing/ngx-scanner';
 
 
 @NgModule({
@@ -21,7 +24,8 @@ import { MatRadioModule } from '@angular/material/radio';
     AppComponent,
     ScannerComponent,
     QuestionComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    MapsComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +36,8 @@ import { MatRadioModule } from '@angular/material/radio';
     MatFormFieldModule,
     MatInputModule,
     MatRadioModule,
-    FormsModule
+    FormsModule,
+    ZXingScannerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

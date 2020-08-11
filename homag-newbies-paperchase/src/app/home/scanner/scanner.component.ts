@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   templateUrl: './scanner.component.html',
@@ -6,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScannerComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
+
+  scannerEnabled: boolean = true;
+
 
   ngOnInit(): void {
+  }
+
+  scanSuccessHandler($event: any) {
+    console.log($event);
+    this.router.navigate(['/question', $event])
+  }
+
+  enableScanner() {
+    this.scannerEnabled = true;
   }
 
 }
