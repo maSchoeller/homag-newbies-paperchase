@@ -61,7 +61,7 @@ export class QuestionComponent implements OnInit {
         right = true;
       }
     } else if(this.isNumberQuestion(this.question)) {
-        if (Math.abs(this.question.answer - this.numberSelection) <= (this.question.range*100)) {
+        if (Math.abs(this.question.answer - this.numberSelection) <= (this.question.range*this.question.answer)) {
           right = true;
         }
     } else {
