@@ -3,8 +3,9 @@
     <mat-card-header>
       <mat-card-title>Scanne den nächsten QR Code:</mat-card-title>
     </mat-card-header>
-    <zxing-scanner *ngIf="scannerEnabled" #scanner (scanSuccess)="scanSuccessHandler($event)"
+    <zxing-scanner #scanner (scanSuccess)="scanSuccessHandler($event)"
     (permissionResponse)="displayMessage($event)"
+    (camerasFound)="camerasFoundHandler($event)"
     (camerasNotFound)="displayMessage('Keine kameras gefunden')"
     (hasDevices)="displayMessageHasDevice($event)"
     (torchCompatible)="displayMessage('torchCompatible')">

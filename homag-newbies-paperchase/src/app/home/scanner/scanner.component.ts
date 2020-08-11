@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { ZXingScannerComponent } from '@zxing/ngx-scanner';
 
 @Component({
   templateUrl: './scanner.component.html',
@@ -13,6 +14,9 @@ export class ScannerComponent implements OnInit {
   errorMessage: string
   errorMessageHasDevice: string
 
+  @ViewChild('scanner', { static: false })
+  scanner: ZXingScannerComponent;
+
   ngOnInit(): void {
   }
 
@@ -21,8 +25,10 @@ export class ScannerComponent implements OnInit {
     this.router.navigate(['/question', $event])
   }
 
-  enableScanner() {
+  async enableScanner() {
+    let result = await this.scanner.askForPermission();
     this.scannerEnabled = true;
+    this.errorMessageHasDevice = result+'ask for permission';
   }
 
   displayMessage(message: string) {
@@ -34,6 +40,10 @@ export class ScannerComponent implements OnInit {
     console.log(message)
   }
 
+  camerasFoundHandler($event: MediaDeviceInfo[]){
+    console.log($event);
+    this.scanner.device = $event[0];
+  }
 
 
 }
