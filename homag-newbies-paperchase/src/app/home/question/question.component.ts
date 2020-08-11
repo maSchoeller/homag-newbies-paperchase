@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { QuestionLoaderService} from '../../services/question-loader.service'
 import { IQuestion, Questiontype } from 'src/app/models/IQuestion';
 
@@ -16,6 +16,7 @@ import { DialogComponent } from '../dialog/dialog.component';
 export class QuestionComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
+              private router: Router,
               private questionLoader: QuestionLoaderService,
               private dialog: MatDialog) {
                this.nameSelection = '';
@@ -48,7 +49,7 @@ export class QuestionComponent implements OnInit {
     return q.type === Questiontype.MultipleChoice;
   }
 
-  checkAnswer() {
+  async checkAnswer() {
     let right = false;
     if (this.isMultipleChoiceQuestion(this.question)) {
       console.log(this.multipleChoiceSelection);
@@ -70,6 +71,8 @@ export class QuestionComponent implements OnInit {
     }
     if (right) {
       const dialogRef = this.dialog.open(DialogComponent, { data : { successful: true }});
+      const result = await this.router.navigate(["map",this.question.nextLocation.latitude,this.question.nextLocation.longitude])
+      console.log(result);
     }
     else {
       const dialogRef = this.dialog.open(DialogComponent, { data : { successful: false }});

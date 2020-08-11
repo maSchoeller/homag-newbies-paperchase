@@ -7,6 +7,7 @@
     (permissionResponse)="noPermission($event)"
     (camerasNotFound)="noCamerasFound($event)">
     </zxing-scanner>
-    {{errorMessage}}
+    <div> {{errorMessage}} </div>
+    <button mat-raised-button color="accent" (click)="goBack()">Zurück zur letzten Karte</button>
   </mat-card>
 </div>

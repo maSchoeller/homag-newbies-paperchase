@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
+import {Location} from '@angular/common';
+import { Router, ActivatedRoute } from '@angular/router';
 import { ZXingScannerComponent } from '@zxing/ngx-scanner';
 
 @Component({
@@ -8,7 +9,7 @@ import { ZXingScannerComponent } from '@zxing/ngx-scanner';
 })
 export class ScannerComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private location: Location) { }
 
   scannerEnabled: boolean = true;
   errorMessage: string
@@ -35,4 +36,8 @@ export class ScannerComponent implements OnInit {
     this.errorMessage = 'Es wurde keine Kamera gefunden.' + $event;
   }
 
+
+  goBack() {
+    this.location.back();
+  }
 }

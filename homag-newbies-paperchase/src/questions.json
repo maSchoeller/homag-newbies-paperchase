@@ -5,7 +5,11 @@
     "type": "number",
     "imagePath": "",
     "answer": 6498,
-    "range": 0.05
+    "range": 0.05,
+    "nextLocation": {
+      "longitude": "48.438040",
+      "latitude" : "8.546867"
+    }
   },
   {
     "id":"ausbildungsberufe",
@@ -37,6 +41,10 @@
     "type": "name",
     "imagePath": "",
     "answer": "Pekka Paasivaara",
-    "caseSensitive": false
+    "caseSensitive": false,
+    "nextLocation": {
+      "longitude": "48.438040",
+      "latitude" : "8.546867"
+    }
   }
 ]
