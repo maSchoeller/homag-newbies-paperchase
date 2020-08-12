@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1597224723324,
+  "timestamp": 1597226226839,
   "index": "/homag-newbies-paperchase/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/homag-newbies-paperchase/favicon.ico",
         "/homag-newbies-paperchase/index.html",
-        "/homag-newbies-paperchase/main.0768f942c72208d31342.js",
+        "/homag-newbies-paperchase/main.8373cfeacd0d7097498b.js",
         "/homag-newbies-paperchase/manifest.webmanifest",
         "/homag-newbies-paperchase/polyfills.a4021de53358bb0fec14.js",
         "/homag-newbies-paperchase/runtime.e227d1a0e31cbccbf8ec.js",
@@ -38,7 +38,8 @@
         "/homag-newbies-paperchase/assets/icons/icon-72x72.png",
         "/homag-newbies-paperchase/assets/icons/icon-96x96.png",
         "/homag-newbies-paperchase/assets/place.png",
-        "/homag-newbies-paperchase/assets/point.png"
+        "/homag-newbies-paperchase/assets/point.png",
+        "/homag-newbies-paperchase/assets/schreiner.png"
       ],
       "patterns": []
     }
@@ -55,9 +56,10 @@
     "/homag-newbies-paperchase/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "/homag-newbies-paperchase/assets/place.png": "ebf1cd2d2fbb81d263229be0ab76451c9f907345",
     "/homag-newbies-paperchase/assets/point.png": "5414f0f60ada2ca1a37c99e0d5bcd65388192f51",
+    "/homag-newbies-paperchase/assets/schreiner.png": "ea891d8d7de165f4c648672b50bf7b8720921691",
     "/homag-newbies-paperchase/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/homag-newbies-paperchase/index.html": "48bac7bfadeede39945f8e6f4c14a1ecae3afcca",
-    "/homag-newbies-paperchase/main.0768f942c72208d31342.js": "bbaff067eb31d82d04fa00855687a5bab205b543",
+    "/homag-newbies-paperchase/index.html": "01d5e6440f0b66cd2af9c2b8f3174ca0dd5dd4b2",
+    "/homag-newbies-paperchase/main.8373cfeacd0d7097498b.js": "afbee35e20f715fef75dfdf1c3e94dd2251b1a92",
     "/homag-newbies-paperchase/manifest.webmanifest": "7d7465efa6a7bc2db25610c7f290c9c24b198c4b",
     "/homag-newbies-paperchase/polyfills.a4021de53358bb0fec14.js": "b47435a9ef2a4829f2f9dfd35599bde3614981b1",
     "/homag-newbies-paperchase/runtime.e227d1a0e31cbccbf8ec.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
