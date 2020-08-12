@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1597223917951,
+  "timestamp": 1597224363515,
   "index": "/homag-newbies-paperchase/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/homag-newbies-paperchase/favicon.ico",
         "/homag-newbies-paperchase/index.html",
-        "/homag-newbies-paperchase/main.5b70a091327d19fddc6d.js",
+        "/homag-newbies-paperchase/main.d5b7beda3b40d14cb0a3.js",
         "/homag-newbies-paperchase/manifest.webmanifest",
         "/homag-newbies-paperchase/polyfills.a4021de53358bb0fec14.js",
         "/homag-newbies-paperchase/runtime.e227d1a0e31cbccbf8ec.js",
@@ -56,8 +56,8 @@
     "/homag-newbies-paperchase/assets/place.png": "ebf1cd2d2fbb81d263229be0ab76451c9f907345",
     "/homag-newbies-paperchase/assets/point.png": "5414f0f60ada2ca1a37c99e0d5bcd65388192f51",
     "/homag-newbies-paperchase/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/homag-newbies-paperchase/index.html": "69f113a4a9b3fa05b1c660397116e2072f07bb6c",
-    "/homag-newbies-paperchase/main.5b70a091327d19fddc6d.js": "44c1dd584b3e1f01ea7a2b9219ba0bd9f6da5e63",
+    "/homag-newbies-paperchase/index.html": "05e202197ebac9ea9c77e3a9193bdb7d1f4639b8",
+    "/homag-newbies-paperchase/main.d5b7beda3b40d14cb0a3.js": "cbbe9f28f9f7241080fee86b06d5bbf5836d84a7",
     "/homag-newbies-paperchase/manifest.webmanifest": "7d7465efa6a7bc2db25610c7f290c9c24b198c4b",
     "/homag-newbies-paperchase/polyfills.a4021de53358bb0fec14.js": "b47435a9ef2a4829f2f9dfd35599bde3614981b1",
     "/homag-newbies-paperchase/runtime.e227d1a0e31cbccbf8ec.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
