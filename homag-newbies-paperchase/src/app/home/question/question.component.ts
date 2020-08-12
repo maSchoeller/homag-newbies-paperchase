@@ -61,7 +61,8 @@ export class QuestionComponent implements OnInit {
       right = true;
     } else if (
       this.isNameQuestion(this.question) &&
-      this.question.answer === this.nameSelection
+      ((this.question.caseSensitive && this.question.answer === this.nameSelection) ||
+        (!this.question.caseSensitive && this.nameSelection.toUpperCase() == this.question.answer.toUpperCase()))
     ) {
       right = true;
     } else if (
@@ -70,9 +71,6 @@ export class QuestionComponent implements OnInit {
         this.question.range * this.question.answer
     ) {
       right = true;
-    } else {
-      console.log('Unsupported Question type.');
-      return;
     }
     if (right) {
       const dialogRef = this.dialog.open(DialogComponent, {
