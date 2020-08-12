@@ -54,22 +54,22 @@ export class QuestionComponent implements OnInit {
 
   async checkAnswer() {
     let right = false;
-    if (this.isMultipleChoiceQuestion(this.question)) {
-      console.log(this.multipleChoiceSelection);
-      if (this.multipleChoiceSelection?.right) {
-        right = true;
-      }
-    } else if (this.isNameQuestion(this.question)) {
-      if (this.question.answer === this.nameSelection) {
-        right = true;
-      }
-    } else if (this.isNumberQuestion(this.question)) {
-      if (
-        Math.abs(this.question.answer - this.numberSelection) <=
+    if (
+      this.isMultipleChoiceQuestion(this.question) &&
+      this.multipleChoiceSelection?.right
+    ) {
+      right = true;
+    } else if (
+      this.isNameQuestion(this.question) &&
+      this.question.answer === this.nameSelection
+    ) {
+      right = true;
+    } else if (
+      this.isNumberQuestion(this.question) &&
+      Math.abs(this.question.answer - this.numberSelection) <=
         this.question.range * this.question.answer
-      ) {
-        right = true;
-      }
+    ) {
+      right = true;
     } else {
       console.log('Unsupported Question type.');
       return;
@@ -79,12 +79,11 @@ export class QuestionComponent implements OnInit {
         data: { successful: true },
       });
       await dialogRef.afterClosed().toPromise();
-      const result = await this.router.navigate([
+      await this.router.navigate([
         'map',
         this.question.nextLocation.latitude,
         this.question.nextLocation.longitude,
       ]);
-      console.log(result);
     } else {
       const dialogRef = this.dialog.open(DialogComponent, {
         data: { successful: false },
