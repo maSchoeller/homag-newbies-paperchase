@@ -16,6 +16,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import { MapsComponent } from './home/maps/maps.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatIconModule} from '@angular/material/icon';
 
 import { ZXingScannerModule } from '@zxing/ngx-scanner';
 import { DialogComponent } from './home/dialog/dialog.component';
@@ -45,6 +46,7 @@ import { environment } from '../environments/environment';
     MatInputModule,
     MatRadioModule,
     FormsModule,
+    MatIconModule,
     ZXingScannerModule,
     MatDialogModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })

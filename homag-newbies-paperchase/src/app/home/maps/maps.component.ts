@@ -1,12 +1,13 @@
 import { Component, OnInit, AfterViewInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {Circle, Fill, Style} from 'ol/style';
+import {Circle, Fill, Style, Icon} from 'ol/style';
 import {Feature, Map, Overlay, View} from 'ol/index';
 import {OSM, Vector as VectorSource} from 'ol/source';
 import {Point} from 'ol/geom';
 import {Tile as TileLayer, Vector as VectorLayer} from 'ol/layer';
 import * as olProj from 'ol/proj';
 import OverlayPositioning from 'ol/OverlayPositioning';
+import IconAnchorUnits from 'ol/style/IconAnchorUnits';
 
 
 @Component({
@@ -30,9 +31,15 @@ export class MapsComponent implements OnInit {
             features: [new Feature(point)],
           }),
           style: new Style({
-            image: new Circle({
-              radius: 9,
-              fill: new Fill({color: 'red'}),
+            // image: new Circle({
+            //   radius: 9,
+            //   fill: new Fill({color: 'red'}),
+            // }),
+            image: new Icon({
+              anchor: [0.5, 46],
+              anchorXUnits: IconAnchorUnits.FRACTION,
+              anchorYUnits: IconAnchorUnits.PIXELS,
+              src: '/assets/place.png'
             }),
           }),
         })

@@ -1,3 +1,17 @@
-<div>
-  <p>{{answer}}</p>
+<div *ngIf="data.successful" class="container">
+  <div><mat-icon aria-hidden="false" class="done-icon">check</mat-icon></div>
+  <div>
+    <p>
+      "Die Antwort ist richtig!"
+    </p>
+
+  </div>
+</div>
+<div *ngIf="!data.successful" class="container">
+  <div><mat-icon aria-hidden="false" class="false-icon">close</mat-icon></div>
+ <div>
+  <p>
+    "Die Antwort ist leider falsch!"
+  </p>
+ </div>
 </div>
