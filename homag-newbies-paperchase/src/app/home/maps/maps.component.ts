@@ -8,6 +8,7 @@ import {Tile as TileLayer, Vector as VectorLayer} from 'ol/layer';
 import * as olProj from 'ol/proj';
 import OverlayPositioning from 'ol/OverlayPositioning';
 import IconAnchorUnits from 'ol/style/IconAnchorUnits';
+import { environment } from 'src/environments/environment';
 
 
 @Component({
@@ -39,7 +40,7 @@ export class MapsComponent implements OnInit {
               anchor: [0.5, 46],
               anchorXUnits: IconAnchorUnits.FRACTION,
               anchorYUnits: IconAnchorUnits.PIXELS,
-              src: '/assets/place.png'
+              src: environment.relativePath + '/assets/place.png'
             }),
           }),
         })
