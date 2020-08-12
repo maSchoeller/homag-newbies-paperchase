@@ -40,7 +40,7 @@ export class MapsComponent implements OnInit {
               anchor: [0.5, 46],
               anchorXUnits: IconAnchorUnits.FRACTION,
               anchorYUnits: IconAnchorUnits.PIXELS,
-              src: environment.relativePath + '/assets/place.png'
+              src: environment.path + '/assets/place.png'
             }),
           }),
         })
