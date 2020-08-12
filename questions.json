@@ -15,7 +15,7 @@
     "id":"ausbildungsberufe",
     "message": "Welchen Beruf bildet HOMAG nicht aus?",
     "type": "multipleChoice",
-    "imagePath": "",
+    "imagePath": "cnc.png",
     "answers" : [
       {
         "text": "Elektroniker",
@@ -39,9 +39,9 @@
     "id":"homag-ceo",
     "message": "Wie heißt der CEO der HOMAG?",
     "type": "name",
-    "imagePath": "",
+    "imagePath": "treffen.png",
     "answer": "Pekka Paasivaara",
-    "caseSensitive": false,
+    "caseSensitive": true,
     "nextLocation": {
       "longitude": "48.438040",
       "latitude" : "8.546867"
