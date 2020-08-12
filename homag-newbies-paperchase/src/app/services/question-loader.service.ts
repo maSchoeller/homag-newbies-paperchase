@@ -9,7 +9,6 @@ import QuestionJson from '../../questions.json';
 })
 export class QuestionLoaderService {
   constructor() {
-      console.log(QuestionJson);
       this.data = QuestionJson as any;
   }
 

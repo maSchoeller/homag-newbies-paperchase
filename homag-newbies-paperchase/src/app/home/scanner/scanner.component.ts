@@ -21,7 +21,6 @@ export class ScannerComponent implements OnInit {
   }
 
   scanSuccessHandler($event: any) {
-    console.log($event);
     this.router.navigate(['/question', $event])
   }
 

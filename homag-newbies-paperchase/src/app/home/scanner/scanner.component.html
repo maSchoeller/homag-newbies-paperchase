@@ -8,6 +8,11 @@
     (camerasNotFound)="noCamerasFound($event)">
     </zxing-scanner>
     <div> {{errorMessage}} </div>
-    <button mat-raised-button color="accent" (click)="goBack()">Zurück zur letzten Seite</button>
+    <button mat-raised-button color="accent" (click)="goBack()">
+      <div class="container">
+        <mat-icon aria-hidden="false" class="false-icon">arrow_back</mat-icon>
+        <div>Zurück zur letzten Seite</div>
+      </div>
+    </button>
   </mat-card>
 </div>
