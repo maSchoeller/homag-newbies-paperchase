@@ -3,10 +3,11 @@
     <mat-card-header>
       <mat-card-title>Scanne den nächsten QR Code um die Frage zu lesen:</mat-card-title>
     </mat-card-header>
-    <zxing-scanner #scanner (scanSuccess)="scanSuccessHandler($event)"
+    <zxing-scanner class="scanner" mat-card-image #scanner (scanSuccess)="scanSuccessHandler($event)"
     (permissionResponse)="noPermission($event)"
     (camerasNotFound)="noCamerasFound($event)">
     </zxing-scanner>
+
     <div> {{errorMessage}} </div>
     <button mat-raised-button color="accent" (click)="goBack()">
       <div class="container">

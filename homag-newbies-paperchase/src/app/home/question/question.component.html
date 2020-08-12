@@ -1,6 +1,6 @@
 <div *ngIf="questionFound">
   <mat-card class="question-card">
-    <img *ngIf="question.imagePath" mat-card-image [src]="question.imagePath" alt="Bild zur Frage">
+    <img *ngIf="question.imagePath" mat-card-image [src]="'assets/'+question.imagePath" alt="Bild zur Frage">
     <mat-card-content class="question-content">
       <p class="question-message">
         {{question.message}}

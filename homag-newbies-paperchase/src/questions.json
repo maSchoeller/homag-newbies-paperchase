@@ -3,7 +3,7 @@
     "id":"mitarbeiter-homag",
     "message": "Wie viele Mitarbeiter hat HOMAG momentan ca. angestellt?",
     "type": "number",
-    "imagePath": "",
+    "imagePath": "schreiner.png",
     "answer": 6498,
     "range": 0.05,
     "nextLocation": {
