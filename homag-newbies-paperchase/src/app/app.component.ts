@@ -6,5 +6,4 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'homag-newbies-paperchase';
 }
