@@ -40,7 +40,8 @@
     "message": "Wie heißt der CEO der HOMAG?",
     "type": "name",
     "imagePath": "treffen.png",
-    "answer": "Pekka Paasivaara",
+    "answers": ["Pekka Paasivaara", "test"],
+    "requiredAnswers" : 2,
     "caseSensitive": true,
     "nextLocation": {
       "longitude": "48.438040",
