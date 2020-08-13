@@ -11,7 +11,8 @@ export interface IQuestion {
 }
 
 export enum Questiontype {
-  Number = "number",
-  MultipleChoice = "multipleChoice",
-  Name = "name"
+  Number = 'number',
+  MultipleChoice = 'multipleChoice',
+  Name = 'name'
+
 }

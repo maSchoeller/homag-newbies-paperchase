@@ -23,21 +23,30 @@ export class QuestionComponent implements OnInit {
     private questionLoader: QuestionLoaderService,
     private dialog: MatDialog
   ) {
-    this.nameSelection = '';
-  }
-
-  question: IQuestion;
-  multipleChoiceSelection: IAnswer;
-  nameSelection: string;
-  numberSelection: number;
-  questionFound: boolean;
-
-  ngOnInit(): void {
     let routeParams = this.route.snapshot.params;
     this.question = this.questionLoader.findQuestion(routeParams.id);
     if (this.question) {
       this.questionFound = true;
     }
+    if (this.isNameQuestion(this.question)) {
+      this.nameSelections = new Array<{ value: string; nr: number }>(
+        this.question.requiredAnswers
+      );
+      this.nameSelections.forEach((element, it) => {
+        element.value = '';
+        element.nr = it;
+      });
+    }
+  }
+
+  question: IQuestion;
+  multipleChoiceSelection: IAnswer;
+  nameSelections: { value: string; nr: number }[];
+  numberSelection: number;
+  questionFound: boolean;
+
+  ngOnInit(): void {
+
   }
 
   isNumberQuestion(q: IQuestion): q is INumberQuestion {
@@ -59,12 +68,19 @@ export class QuestionComponent implements OnInit {
       this.multipleChoiceSelection?.right
     ) {
       right = true;
-    } else if (
-      this.isNameQuestion(this.question) &&
-      ((this.question.caseSensitive && this.question.answer === this.nameSelection) ||
-        (!this.question.caseSensitive && this.nameSelection.toUpperCase() == this.question.answer.toUpperCase()))
-    ) {
-      right = true;
+    } else if (this.isNameQuestion(this.question)) {
+      if (
+        this.nameSelections.every((a) =>
+          (this.question as INameQuestion).answers.some(
+            (aa) =>
+              (!(<any>this.question).caseSensitive &&
+                aa.toUpperCase() == a.value?.toUpperCase()) ||
+              aa == a.value
+          )
+        )
+      ) {
+        right = true;
+      }
     } else if (
       this.isNumberQuestion(this.question) &&
       Math.abs(this.question.answer - this.numberSelection) <=
