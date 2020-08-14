@@ -24,10 +24,10 @@
       </div>
       <div *ngIf="isNameQuestion(question)" class="input flex-container">
         <div
-          *ngFor="let item of nameSelections; index as i"
+          *ngFor="let item of nameSelections"
           class="container-name"
         >
-        <div>{{item.nr}}</div>
+        <div class="number">{{item.nr}}.</div>
           <mat-form-field appearance="standard" class="mat-form-field">
             <div>
               <input

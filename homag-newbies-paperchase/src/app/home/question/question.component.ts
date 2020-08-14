@@ -32,10 +32,12 @@ export class QuestionComponent implements OnInit {
       this.nameSelections = new Array<{ value: string; nr: number }>(
         this.question.requiredAnswers
       );
-      this.nameSelections.forEach((element, it) => {
-        element.value = '';
-        element.nr = it;
-      });
+      for (let index = 0; index < this.nameSelections.length; index++) {
+        this.nameSelections[index] = {
+          nr: index + 1,
+          value: '',
+        };
+      }
     }
   }
 
@@ -45,9 +47,7 @@ export class QuestionComponent implements OnInit {
   numberSelection: number;
   questionFound: boolean;
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 
   isNumberQuestion(q: IQuestion): q is INumberQuestion {
     return q.type === Questiontype.Number;
