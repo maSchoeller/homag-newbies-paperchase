@@ -1,0 +1,66 @@
+[
+  {
+    "id": "mitarbeiter-homag",
+    "message": "Wie viele Mitarbeiter hat HOMAG momentan ca. angestellt?",
+    "type": "number",
+    "imagePath": "schreiner.png",
+    "answer": 6498,
+    "range": 0.05,
+    "nextLocation": {
+      "longitude": "48.438040",
+      "latitude": "8.546867"
+    }
+  },
+  {
+    "id": "ausbildungsberufe",
+    "message": "Welchen Beruf bildet HOMAG nicht aus?",
+    "type": "multipleChoice",
+    "imagePath": "cnc.png",
+    "answers": [
+      {
+        "text": "Elektroniker",
+        "right": false
+      },
+      {
+        "text": "Studium BWL Industrie",
+        "right": true
+      },
+      {
+        "text": "Fachinformatiker",
+        "right": false
+      }
+    ],
+    "nextLocation": {
+      "longitude": "48.457143",
+      "latitude": "8.557876"
+    }
+  },
+  {
+    "id": "homag-ceo",
+    "message": "Wie heißt der CEO der HOMAG?",
+    "type": "name",
+    "imagePath": "treffen.png",
+    "answers": ["Pekka Paasivaara", "test"],
+    "requiredAnswers": 2,
+    "caseSensitive": true,
+    "nextLocation": {
+      "longitude": "48.438040",
+      "latitude": "8.546867"
+    }
+  },
+  {
+    "id": "homag-ceo2",
+    "message": "Wie heißt der CEO der HOMAG?",
+    "type": "multiname",
+    "imagePath": "treffen.png",
+    "questions": [
+      { "text": "Pekka Paasivaara", "anwser": "test" },
+      { "text": "Studium BWL Industrie", "anwser": "test2" }
+    ],
+    "caseSensitive": true,
+    "nextLocation": {
+      "longitude": "48.438040",
+      "latitude": "8.546867"
+    }
+  }
+]

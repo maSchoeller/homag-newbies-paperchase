@@ -5,6 +5,7 @@ import { IQuestion, Questiontype } from 'src/app/models/IQuestion';
 
 import INumberQuestion from 'src/app/models/INumberQuestion';
 import INameQuestion from 'src/app/models/INameQuestion';
+import { IMultiNameQuestion } from 'src/app/models/IMultiNameQuestion';
 import {
   IMultipleChoiceQuestion,
   IAnswer,
@@ -22,7 +23,15 @@ export class QuestionComponent implements OnInit {
     private router: Router,
     private questionLoader: QuestionLoaderService,
     private dialog: MatDialog
-  ) {
+  ) {}
+
+  question: IQuestion;
+  multipleChoiceSelection: IAnswer;
+  nameSelections: { value: string; nr: number | string }[];
+  numberSelection: number;
+  questionFound: boolean;
+
+  ngOnInit(): void {
     let routeParams = this.route.snapshot.params;
     this.question = this.questionLoader.findQuestion(routeParams.id);
     if (this.question) {
@@ -38,16 +47,18 @@ export class QuestionComponent implements OnInit {
           value: '',
         };
       }
+    } else if (this.isMultiNameQuestion(this.question)) {
+      this.nameSelections = new Array<{ value: string; nr: number | string }>(
+        this.question.questions.length
+      );
+      for (let index = 0; index < this.nameSelections.length; index++) {
+        this.nameSelections[index] = {
+          nr: this.question.questions[index].text,
+          value: '',
+        };
+      }
     }
   }
-
-  question: IQuestion;
-  multipleChoiceSelection: IAnswer;
-  nameSelections: { value: string; nr: number }[];
-  numberSelection: number;
-  questionFound: boolean;
-
-  ngOnInit(): void {}
 
   isNumberQuestion(q: IQuestion): q is INumberQuestion {
     return q.type === Questiontype.Number;
@@ -59,6 +70,10 @@ export class QuestionComponent implements OnInit {
 
   isMultipleChoiceQuestion(q: IQuestion): q is IMultipleChoiceQuestion {
     return q.type === Questiontype.MultipleChoice;
+  }
+
+  isMultiNameQuestion(q: IQuestion): q is IMultiNameQuestion {
+    return q.type === Questiontype.MultiName;
   }
 
   async checkAnswer() {
@@ -74,8 +89,8 @@ export class QuestionComponent implements OnInit {
           (this.question as INameQuestion).answers.some(
             (aa) =>
               (!(<any>this.question).caseSensitive &&
-                aa.toUpperCase() == a.value?.toUpperCase()) ||
-              aa == a.value
+                aa.toUpperCase() == a.value?.trim().toUpperCase()) ||
+              aa == a.value?.trim()
           )
         )
       ) {
@@ -85,6 +100,13 @@ export class QuestionComponent implements OnInit {
       this.isNumberQuestion(this.question) &&
       Math.abs(this.question.answer - this.numberSelection) <=
         this.question.range * this.question.answer
+    ) {
+      right = true;
+    } else if (
+      this.isMultiNameQuestion(this.question) &&
+      this.question.questions.every(
+        (q, it) => q.anwser == this.nameSelections[it]?.value
+      )
     ) {
       right = true;
     }

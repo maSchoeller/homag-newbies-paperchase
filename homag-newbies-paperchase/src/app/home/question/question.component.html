@@ -39,6 +39,23 @@
           </mat-form-field>
         </div>
       </div>
+      <div *ngIf="isMultiNameQuestion(question)" class="input flex-container">
+        <div
+          *ngFor="let item of nameSelections"
+          class="container-name"
+        >
+        <div class="number">{{item.nr}}:</div>
+          <mat-form-field appearance="standard" class="mat-form-field">
+            <div>
+              <input
+                matInput
+                placeholder="Antwort"
+                [(ngModel)]="item.value"
+              />
+            </div>
+          </mat-form-field>
+        </div>
+      </div>
       <div *ngIf="isMultipleChoiceQuestion(question)" class="input">
         <mat-radio-group
           aria-labelledby="multipleChoice-radio-group"
