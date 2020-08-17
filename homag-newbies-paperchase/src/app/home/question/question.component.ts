@@ -36,26 +36,26 @@ export class QuestionComponent implements OnInit {
     this.question = this.questionLoader.findQuestion(routeParams.id);
     if (this.question) {
       this.questionFound = true;
-    }
-    if (this.isNameQuestion(this.question)) {
-      this.nameSelections = new Array<{ value: string; nr: number }>(
-        this.question.requiredAnswers
-      );
-      for (let index = 0; index < this.nameSelections.length; index++) {
-        this.nameSelections[index] = {
-          nr: index + 1,
-          value: '',
-        };
-      }
-    } else if (this.isMultiNameQuestion(this.question)) {
-      this.nameSelections = new Array<{ value: string; nr: number | string }>(
-        this.question.questions.length
-      );
-      for (let index = 0; index < this.nameSelections.length; index++) {
-        this.nameSelections[index] = {
-          nr: this.question.questions[index].text,
-          value: '',
-        };
+      if (this.isNameQuestion(this.question)) {
+        this.nameSelections = new Array<{ value: string; nr: number }>(
+          this.question.requiredAnswers
+        );
+        for (let index = 0; index < this.nameSelections.length; index++) {
+          this.nameSelections[index] = {
+            nr: index + 1,
+            value: '',
+          };
+        }
+      } else if (this.isMultiNameQuestion(this.question)) {
+        this.nameSelections = new Array<{ value: string; nr: number | string }>(
+          this.question.questions.length
+        );
+        for (let index = 0; index < this.nameSelections.length; index++) {
+          this.nameSelections[index] = {
+            nr: this.question.questions[index].text,
+            value: '',
+          };
+        }
       }
     }
   }
