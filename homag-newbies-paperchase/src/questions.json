@@ -153,7 +153,7 @@
     "type": "name",
     "imagePath": "treffen.png",
     "answers": ["start", "ausgangspunkt"],
-    "requiredAnswers": 2,
+    "requiredAnswers": 1,
     "caseSensitive": true,
     "nextLocation": {
       "longitude": "48.47087",
@@ -188,11 +188,13 @@
   {
     "_nr": 10,
     "id": "raetsel406",
-    "message": "In einem Kaufhaus wird im 1. Stock Damenbekleidung, im 2. Stock Herrenbekleidung, im 3. Stock Kinderbekleidung und im 4. Stock Elektronikartikel und Sportsachen angeboten. Viele Kunden fahren in diesem Kaufhaus mit dem Aufzug. Welcher Knopf wird in diesem Aufzug am häufigsten gedrückt?",
-    "type": "multiname",
+    "message": "In einem Kaufhaus wird im 1. Stock Damenbekleidung, im 2. Stock Herrenbekleidung, im 3. Stock Kinderbekleidung und im 4. Stock Elektronikartikel und Sportsachen angeboten. Viele Kunden fahren in diesem Kaufhaus mit dem Aufzug. Welcher Knopf wird in diesem Aufzug am häufigsten gedrückt? Der Knopf zum:",
+    "type": "name",
     "imagePath": "treffen.png",
-    "questions": [{ "text": "Der Knopf zum:", "anwser": "Erdgeschoss" }],
-    "requiredAnswers": 2,
+    "answers": [
+      "Erdgeschoss"
+    ],
+    "requiredAnswers": 1,
     "caseSensitive": false,
     "nextLocation": {
       "longitude": "48.46699",
@@ -272,7 +274,7 @@
     "type": "multiname",
     "imagePath": "treffen.png",
     "questions": [{ "text": "Das Wort:", "anwser": "falsch" }],
-    "requiredAnswers": 2,
+    "requiredAnswers": 1,
     "caseSensitive": false,
     "nextLocation": {
       "longitude": "48.46658",
@@ -282,11 +284,11 @@
   {
     "_nr": 15,
     "id": "raetsel1",
-    "message": "Wer trinkt etwas, was er nicht selber besitzt und hätte er es, würde er es nie trinken?",
-    "type": "multiname",
+    "message": "Wer trinkt etwas, was er nicht selber besitzt und hätte er es, würde er es nie trinken? Ein(e):",
+    "type": "name",
     "imagePath": "treffen.png",
-    "questions": [{ "text": "Ein(e):", "anwser": "Vampir" }],
-    "requiredAnswers": 2,
+    "answers": ["Vampir"],
+    "requiredAnswers": 1,
     "caseSensitive": false,
     "nextLocation": {
       "longitude": "48.46214",
