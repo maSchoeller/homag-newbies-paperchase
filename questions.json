@@ -1,55 +1,19 @@
 [
   {
     "_nr": 1,
-    "id": "bus",
-    "message": "Wie lauten unsere fünf Technologie Business Units?",
-    "type": "name",
-    "imagePath": "schreiner.png",
-    "answers": [
-      "CNC-Technik",
-      "Kantentechnik",
-      "Plattenaufteiltechnik",
-      "Automatisierungstechnik",
-      "Oberflächentechnik"
-    ],
-    "requiredAnswers": 5,
-    "caseSensitive": false,
+    "id": "gruedungsjahr",
+    "message": "In welchem Jahr wurde HOMAG gegründet?",
+    "type": "number",
+    "imagePath": "cnc.png",
+    "answer": 1960,
+    "range": 0.0,
     "nextLocation": {
       "longitude": "48.45652",
       "latitude": "8.56307"
     }
   },
-
-
   {
     "_nr": 2,
-    "id": "krank-melden",
-    "message": "Wann muss man sich krank melden?",
-    "type": "multipleChoice",
-    "imagePath": "schreiner.png",
-    "answers": [
-      {
-        "text": "Bis 9 Uhr am ersten Fehltag telefonisch, bis spätestens dritten Fehltag schriftlich",
-        "right": true
-      },
-      {
-        "text": "Bis 19 Uhr am Abend davor per mail, bis spätestens dritten Fehltag schriftlich",
-        "right": false
-      },
-      {
-        "text": "Bis 9 Uhr am ersten Fehltag telefonisch, bis spätestens zweiten Fehltag schriftlich",
-        "right": false
-      }
-    ],
-    "nextLocation": {
-      "longitude": "48.45663",
-      "latitude": "8.56726"
-    }
-  },
-
-
-  {
-    "_nr": 3,
     "id": "mitglieder-jugendvertretung",
     "message": "Wie viele Mitglieder hat die Jugendvertretung?",
     "type": "multipleChoice",
@@ -69,12 +33,174 @@
       }
     ],
     "nextLocation": {
+      "longitude": "48.45663",
+      "latitude": " 8.56726"
+    }
+  },
+  {
+    "_nr": 3,
+    "id": "krank-melden",
+    "message": "Wann muss man sich krankmelden?",
+    "type": "multipleChoice",
+    "imagePath": "schreiner.png",
+    "answers": [
+      {
+        "text": "Bis 9 Uhr am ersten Fehltag telefonisch, bis spätestens dritten Fehltag schriftlich",
+        "right": true
+      },
+      {
+        "text": "Bis 19 Uhr am Abend davor per mail, bis spätestens dritten Fehltag schriftlich",
+        "right": false
+      },
+      {
+        "text": "Bis 9 Uhr am ersten Fehltag telefonisch, bis spätestens zweiten Fehltag schriftlich",
+        "right": false
+      }
+    ],
+    "nextLocation": {
       "longitude": "48.45821",
       "latitude": "8.5673"
     }
   },
   {
     "_nr": 4,
+    "id": "frage895",
+    "message": "Ein Mensch ohne Bildung ist…",
+    "type": "multipleChoice",
+    "imagePath": "schreiner.png",
+    "answers": [
+      {
+        "text": "ein dumm gebliebener Mensch",
+        "right": false
+      },
+      {
+        "text": "ein Spiegel ohne Politur",
+        "right": true
+      },
+      {
+        "text": "besser als ein Mensch ohne Meinung",
+        "right": false
+      }
+    ],
+    "nextLocation": {
+      "longitude": "48.45915",
+      "latitude": " 8.56942"
+    }
+  },
+  {
+    "_nr": 5,
+    "id": "passwort",
+    "message": "Nennen Sie 3 Kriterien für ein gutes Passwort (stichwort, verneinungen mit kein(e) ...)",
+    "type": "name",
+    "imagePath": "schreiner.png",
+    "answers": [
+      "geheim",
+      "lang",
+      "sonderzeichen",
+      "zahlen",
+      "groß klein",
+      "kein name",
+      "keine telefonnummer",
+      "keine emailadresse",
+      "zehn zeichen",
+      "10 zeichen"
+    ],
+    "requiredAnswers": 3,
+    "caseSensitive": false,
+    "nextLocation": {
+      "longitude": "48.46216",
+      "latitude": " 8.56906"
+    }
+  },
+  {
+    "_nr": 6,
+    "id": "raetsel-waagen",
+    "message": "Eine junge Frau leiht sich für ca. 1 Stunde einen Wagen aus. Nach dieser Zeit möchte Sie den Wagen, an die dafür vorgesehene Station zurückbringen. Doch kurz vor dem Ziel kommt ein wildfremder Mann auf Sie zugestürmt und überreicht ihr etwas Geld für den Wagen. Die Frau nimmt dankend das Geld an und gibt dem wildfremden Mann den Wagen, ohne sich noch einmal umzuschauen. Dennoch hat die junge Frau nichts Verbotenes gemacht. Wieso nicht??? (ein Wort)",
+    "type": "name",
+    "imagePath": "treffen.png",
+    "answers": ["Supermarktwaagen", "Einkaufswaagen", "Supermarkt"],
+    "requiredAnswers": 1,
+    "caseSensitive": false,
+    "nextLocation": {
+      "longitude": "48.46347",
+      "latitude": "8.57238"
+    }
+  },
+  {
+    "_nr": 7,
+    "id": "bus",
+    "message": "Wie lauten unsere fünf Technologie Business Units?",
+    "type": "name",
+    "imagePath": "schreiner.png",
+    "answers": [
+      "CNC-Technik",
+      "Kantentechnik",
+      "Plattenaufteiltechnik",
+      "Automatisierungstechnik",
+      "Oberflächentechnik"
+    ],
+    "requiredAnswers": 5,
+    "caseSensitive": false,
+    "nextLocation": {
+      "longitude": "48.46828",
+      "latitude": "8.57662"
+    }
+  },
+  {
+    "_nr": 8,
+    "id": "raetsel-position",
+    "message": "Gehe fünf Schritte nach vorne. Drehe dich 90 Grad nach rechts und gehe weitere fünf Schritte vor. Nun drehe dich ein weiteres Mal nach rechts und gehe 10 Schritte weiter. Jetzt 90 Grad nach links und 3 Schritte nach vorne. Anschließend ein weiteres Mal nach links und erneut 5 Schritte vor. Zum Schluss ein letztes Mal nach links drehen und acht Schritte nach vorne laufen. Wo befindest du dich jetzt?",
+    "type": "name",
+    "imagePath": "treffen.png",
+    "answers": ["start", "ausgangspunkt"],
+    "requiredAnswers": 2,
+    "caseSensitive": true,
+    "nextLocation": {
+      "longitude": "48.47087",
+      "latitude": "8.57635"
+    }
+  },
+  {
+    "_nr": 9,
+    "id": "arbeitsbeginn",
+    "message": "Wann ist der frühestmögliche Arbeitsbeginn für einen unter 18- jährigen, wenn die Berufsschule nach  der 4. Stunde zu ende ist?",
+    "type": "multipleChoice",
+    "imagePath": "cnc.png",
+    "answers": [
+      {
+        "text": "13:00 Uhr",
+        "right": false
+      },
+      {
+        "text": "12:45 Uhr",
+        "right": true
+      },
+      {
+        "text": "frei",
+        "right": false
+      }
+    ],
+    "nextLocation": {
+      "longitude": "48.46898",
+      "latitude": "8.57362"
+    }
+  },
+  {
+    "_nr": 10,
+    "id": "raetsel406",
+    "message": "In einem Kaufhaus wird im 1. Stock Damenbekleidung, im 2. Stock Herrenbekleidung, im 3. Stock Kinderbekleidung und im 4. Stock Elektronikartikel und Sportsachen angeboten. Viele Kunden fahren in diesem Kaufhaus mit dem Aufzug. Welcher Knopf wird in diesem Aufzug am häufigsten gedrückt?",
+    "type": "multiname",
+    "imagePath": "treffen.png",
+    "questions": [{ "text": "Der Knopf zum:", "anwser": "Erdgeschoss" }],
+    "requiredAnswers": 2,
+    "caseSensitive": false,
+    "nextLocation": {
+      "longitude": "48.46699",
+      "latitude": "8.57087"
+    }
+  },
+  {
+    "_nr": 11,
     "id": "ausbilder",
     "message": "Nennen Sie 4 verschiedene Ausbilder? (Vorname, Nachname)",
     "type": "name",
@@ -96,159 +222,12 @@
     "requiredAnswers": 4,
     "caseSensitive": false,
     "nextLocation": {
-      "longitude": "48.45915",
-      "latitude": "8.56942"
-    }
-  },
-  {
-    "_nr": 5,
-    "id": "arbeitsbeginn",
-    "message": "Wann ist der frühestmögliche Arbeitsbeginn für einen unter 18- jährigen, wenn die Berufsschule nach  der 4. Stunde zu ende ist?",
-    "type": "multipleChoice",
-    "imagePath": "cnc.png",
-    "answers": [
-      {
-        "text": "13:00 Uhr",
-        "right": false
-      },
-      {
-        "text": "12:45 Uhr",
-        "right": true
-      },
-      {
-        "text": "frei",
-        "right": false
-      }
-    ],
-    "nextLocation": {
-      "longitude": "48.46216",
-      "latitude": "8.56906"
-    }
-  },
-  {
-    "_nr": 6,
-    "id": "passwort",
-    "message": "Nennen Sie 3 Kriterien für ein gutes Passwort (stichwort, verneinungen mit kein(e) ...)",
-    "type": "name",
-    "imagePath": "schreiner.png",
-    "answers": [
-      "geheim",
-      "lang",
-      "sonderzeichen",
-      "zahlen",
-      "groß klein",
-      "kein name",
-      "keine telefonnummer",
-      "keine emailadresse",
-      "zehn zeichen",
-      "10 zeichen"
-    ],
-    "requiredAnswers": 3,
-    "caseSensitive": false,
-    "nextLocation": {
-      "longitude": "48.46347",
-      "latitude": "8.57238"
-    }
-  },
-  {
-    "_nr": 7,
-    "id": "gruedungsjahr",
-    "message": "In welchem Jahr wurde HOMAG gegründet?",
-    "type": "number",
-    "imagePath": "cnc.png",
-    "answer": 1960,
-    "range": 0.0,
-    "nextLocation": {
-      "longitude": "48.46828",
-      "latitude": "8.57662"
-    }
-  },
-  {
-    "_nr": 8,
-    "id": "edgecnc",
-    "message": "Zwischen welchen beiden grundsätzlichen Maschinentypen unterscheiden wir am Standort Schopfloch?",
-    "type": "name",
-    "imagePath": "schreiner.png",
-    "answers": ["edge", "cnc"],
-    "requiredAnswers": 2,
-    "caseSensitive": false,
-    "nextLocation": {
-      "longitude": "48.47087",
-      "latitude": "8.57635"
-    }
-  },
-  {
-    "_nr": 9,
-    "id": "raetsel-position",
-    "message": "Gehe fünf Schritte nach vorne. Drehe dich 90 Grad nach rechts und gehe weitere fünf Schritte vor. Nun drehe dich ein weiteres Mal nach rechts und gehe 10 Schritte weiter. Jetzt 90 Grad nach links und 3 Schritte nach vorne. Anschließend ein weiteres Mal nach links und erneut 5 Schritte vor. Zum Schluss ein letztes Mal nach links drehen und acht Schritte nach vorne laufen. Wo befindest du dich jetzt?",
-    "type": "name",
-    "imagePath": "treffen.png",
-    "answers": ["start", "ausgangspunkt"],
-    "requiredAnswers": 2,
-    "caseSensitive": true,
-    "nextLocation": {
-      "longitude": "48.46898",
-      "latitude": "8.57362"
-    }
-  },
-  {
-    "_nr": 10,
-    "id": "raetsel-waagen",
-    "message": "Eine junge Frau leiht sich für ca. 1 Stunde einen Wagen aus. Nach dieser Zeit möchte Sie den Wagen, an die dafür vorgesehene Station zurückbringen. Doch kurz vor dem Ziel kommt ein wildfremder Mann auf Sie zugestürmt und überreicht ihr etwas Geld für den Wagen. Die Frau nimmt dankend das Geld an und gibt dem wildfremden Mann den Wagen, ohne sich noch einmal umzuschauen. Dennoch hat die junge Frau nichts Verbotenes gemacht. Wieso nicht??? (ein Wort)",
-    "type": "name",
-    "imagePath": "treffen.png",
-    "answers": ["Supermarktwaagen", "Einkaufswaagen", "Supermarkt"],
-    "requiredAnswers": 2,
-    "caseSensitive": false,
-    "nextLocation": {
-      "longitude": "48.46699",
-      "latitude": "8.57087"
-    }
-  },
-  {
-    "_nr": 11,
-    "id": "raetsel1",
-    "message": "Wer trinkt etwas, was er nicht selber besitzt und hätte er es, würde er es nie trinken?",
-    "type": "multiname",
-    "imagePath": "treffen.png",
-    "questions": [{ "text": "Ein(e):", "anwser": "Vampir" }],
-    "requiredAnswers": 2,
-    "caseSensitive": false,
-    "nextLocation": {
       "longitude": "48.46607",
       "latitude": "8.56735"
     }
   },
   {
     "_nr": 12,
-    "id": "raetsel406",
-    "message": "In einem Kaufhaus wird im 1. Stock Damenbekleidung, im 2. Stock Herrenbekleidung, im 3. Stock Kinderbekleidung und im 4. Stock Elektronikartikel und Sportsachen angeboten. Viele Kunden fahren in diesem Kaufhaus mit dem Aufzug. Welcher Knopf wird in diesem Aufzug am häufigsten gedrückt?",
-    "type": "multiname",
-    "imagePath": "treffen.png",
-    "questions": [{ "text": "Der Knopf zum:", "anwser": "Erdgeschoss" }],
-    "requiredAnswers": 2,
-    "caseSensitive": false,
-    "nextLocation": {
-      "longitude": "48.4682",
-      "latitude": "8.56467"
-    }
-  },
-  {
-    "_nr": 13,
-    "id": "raetsel645",
-    "message": "Welches Wort in einem Wörterbuch aus dem Jahr 2019 wird falsch geschrieben?",
-    "type": "multiname",
-    "imagePath": "treffen.png",
-    "questions": [{ "text": "Das Wort:", "anwser": "falsch" }],
-    "requiredAnswers": 2,
-    "caseSensitive": false,
-    "nextLocation": {
-      "longitude": "48.46764",
-      "latitude": "8.56061"
-    }
-  },
-  {
-    "_nr": 14,
     "id": "frage14",
     "message": "Besser schlecht im Auto gefahren als gut...",
     "type": "multipleChoice",
@@ -268,37 +247,50 @@
       }
     ],
     "nextLocation": {
+      "longitude": "48.4682",
+      "latitude": "8.56467"
+    }
+  },
+  {
+    "_nr": 13,
+    "id": "edgecnc",
+    "message": "Zwischen welchen beiden grundsätzlichen Maschinentypen unterscheiden wir am Standort Schopfloch?",
+    "type": "name",
+    "imagePath": "schreiner.png",
+    "answers": ["edge", "cnc"],
+    "requiredAnswers": 2,
+    "caseSensitive": false,
+    "nextLocation": {
+      "longitude": "48.46764",
+      "latitude": "8.56061"
+    }
+  },
+  {
+    "_nr": 14,
+    "id": "raetsel645",
+    "message": "Welches Wort in einem Wörterbuch aus dem Jahr 2019 wird falsch geschrieben?",
+    "type": "multiname",
+    "imagePath": "treffen.png",
+    "questions": [{ "text": "Das Wort:", "anwser": "falsch" }],
+    "requiredAnswers": 2,
+    "caseSensitive": false,
+    "nextLocation": {
       "longitude": "48.46658",
       "latitude": "8.55684"
     }
   },
   {
     "_nr": 15,
-    "id": "frage895",
-    "message": "Ein Mensch ohne Bildung ist…",
-    "type": "multipleChoice",
-    "imagePath": "schreiner.png",
-    "answers": [
-      {
-        "text": "ein dumm gebliebener Mensch",
-        "right": false
-      },
-      {
-        "text": "ein Spiegel ohne Politur",
-        "right": true
-      },
-      {
-        "text": "besser als ein Mensch ohne Meinung",
-        "right": false
-      }
-    ],
+    "id": "raetsel1",
+    "message": "Wer trinkt etwas, was er nicht selber besitzt und hätte er es, würde er es nie trinken?",
+    "type": "multiname",
+    "imagePath": "treffen.png",
+    "questions": [{ "text": "Ein(e):", "anwser": "Vampir" }],
+    "requiredAnswers": 2,
+    "caseSensitive": false,
     "nextLocation": {
       "longitude": "48.46214",
       "latitude": "8.56175"
     }
   }
 ]
-
-
-
-
