@@ -294,5 +294,18 @@
       "longitude": "48.46214",
       "latitude": "8.56175"
     }
+  },
+  {
+    "_nr": 16,
+    "id": "erste-maschine",
+    "message": "In welchem Jahr hat HOMAG die erste Kantenanleimmaschine vorgestellt?",
+    "type": "number",
+    "imagePath": "cnc.png",
+    "answer": 1962,
+    "range": 0.0,
+    "nextLocation": {
+      "longitude": "48.456962",
+      "latitude": "8.557866"
+    }
   }
 ]
