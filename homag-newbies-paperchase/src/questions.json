@@ -118,7 +118,7 @@
     "message": "Eine junge Frau leiht sich für ca. 1 Stunde einen Wagen aus. Nach dieser Zeit möchte Sie den Wagen, an die dafür vorgesehene Station zurückbringen. Doch kurz vor dem Ziel kommt ein wildfremder Mann auf Sie zugestürmt und überreicht ihr etwas Geld für den Wagen. Die Frau nimmt dankend das Geld an und gibt dem wildfremden Mann den Wagen, ohne sich noch einmal umzuschauen. Dennoch hat die junge Frau nichts Verbotenes gemacht. Wieso nicht??? (ein Wort)",
     "type": "name",
     "imagePath": "treffen.png",
-    "answers": ["Supermarktwaagen", "Einkaufswaagen", "Supermarkt"],
+    "answers": ["Supermarktwagen", "Einkaufswagen", "Supermarkt"],
     "requiredAnswers": 1,
     "caseSensitive": false,
     "nextLocation": {
