@@ -297,7 +297,7 @@
   },
   {
     "_nr": 16,
-    "id": "erste-maschine",
+    "id": "https://maschoeller.github.io/homag-newbies-paperchase/question/erste-maschine",
     "message": "In welchem Jahr hat HOMAG die erste Kantenanleimmaschine vorgestellt?",
     "type": "number",
     "imagePath": "cnc.png",
